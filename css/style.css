@@ -1,0 +1,1602 @@
+/*=========================================*/
+/*=== CSS SCREEN (inicio) ===*/
+/*=========================================*/
+
+/* ===== SETEOS GENERALES ===== */
+
+:root {
+    --principal: #e00747;
+  }
+
+@media screen{
+
+
+    body{
+        background: #fff;
+        font-size: 14px;
+        font-family: 'Montserrat', Arial, sans-serif !important;
+    }
+    body.soporte{
+        height: 100vh;
+    }
+    body.template_mapa{
+        min-height: calc(100vh);
+    }
+    a{
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;  
+    }
+
+    .btn.btn-bloque {
+        display: inline-block;
+        border: none;
+        padding: 0 0;
+        margin: 0;
+        text-decoration: none;
+        background: transparent;
+        color: #ffffff;
+        font-family: sans-serif;
+        font-size: 1rem;
+        cursor: pointer;
+        text-align: center;
+        transition: background 250ms ease-in-out, 
+                    transform 150ms ease;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+    .btn:focus {
+        outline: 0;
+        box-shadow: none;
+    }
+    #transporte_table a.btn_ver_btn_ver_opciones{
+		visibility: hidden;
+		cursor: not-allowed;
+		pointer-events: none;
+	}
+
+
+    a.btn-continuar {
+        background-color: var(--principal);
+        padding: 10px 20px;
+        border-radius: 15px;
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        margin-bottom: 25px;
+    }
+
+    a.btn-continuar:hover,
+    a.btn-continuar:focus{
+        opacity: 0.7;
+    }
+    a.btn-continuar img{
+        width: 25px;
+        margin-left: 15px;
+    }
+
+    a.btn-comprar {
+        background-color: var(--principal);
+        padding: 10px 20px;
+        border-radius: 10px;
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+
+    a.btn-comprar:hover,
+    a.btn-comprar:focus{
+        opacity: 0.7;
+    }
+    a.btn-comprar img{
+        width: 25px;
+        margin-left: 15px;
+    }
+
+    .bloque_botones{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .bloque_botones{
+        flex-direction: column;
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+	#options_table .collapsed.dont-collapse-sm{
+		display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+		height: auto !important;
+		visibility: visible;
+        text-align: right;
+	}
+} 
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #options_table .collapsed.dont-collapse-sm{
+		display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+		height: auto !important;
+		visibility: visible;
+        text-align: right;
+	}
+
+    #options_table .collapsed.dont-collapse-sm div{
+        text-align: center;
+    }
+
+}
+
+
+@media screen and (max-width: 767px) {
+    #options_table a.btn_ver_btn_ver_opciones{
+        display: inline-block;
+        visibility: visible;
+        cursor: pointer;
+        pointer-events: auto;
+        font-size: 16px;
+        color: #626262;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        padding-left: 22px;
+        padding-right: 22px;
+        text-decoration: none;		
+    }
+    #options_table a.btn_ver_btn_ver_opciones:hover,
+    #options_table a.btn_ver_btn_ver_opciones:focus,
+    #options_table a.btn_ver_btn_ver_opciones:active{
+        text-decoration: none;
+    }
+    #options_table a.btn_ver_btn_ver_opciones.collapsed{
+        border-bottom: 1px solid #d1d1d1;
+        border-top: 1px solid #d1d1d1;
+    }
+    #options_table a.btn_ver_btn_ver_opciones:not(.collapsed){
+        border-bottom: none;
+        border-top: 1px solid #d1d1d1;
+    }
+
+    #options_table a.btn_ver_btn_ver_opciones i {
+        background: #01a4db;
+        font-size: 10px;
+        color: #fff;
+        border-radius: 15px;
+        padding: 8px 10px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        margin-left: 15px;
+    }
+    #options_table a.btn_ver_btn_ver_opciones:not(.collapsed) i{
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+    
+
+    #options_table .collapse{
+        height: auto;
+    }
+}
+
+/* ===== HEADER ===== */
+@media screen{
+
+    .header .logo a img{
+        width: 150px;
+    }
+
+}
+
+/* ===== FOOTER ===== */
+@media screen{
+    #footer{
+        background: var(--principal);
+    }
+    .menu_footer{
+        padding: 25px 0;
+    }
+    .menu_footer .menu_one a,
+    .menu_footer .menu_two a{
+        padding-bottom: 3px;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: #fff;
+        line-height: 1;
+        font-weight: 400;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;  
+    }
+    .menu_footer .menu_one a:hover,
+    .menu_footer .menu_one a:focus,
+    .menu_footer .menu_two a:hover,
+    .menu_footer .menu_two a:focus{
+        text-decoration: underline;
+    }
+}
+
+/* ===== MENU_CENTER ===== */
+@media screen{
+    .header .menu_center ul li{
+        width: 150px;
+        background: #f9f9f9;        
+        border-radius: 4px;
+        border: 2px solid #f9f9f9;
+        display:flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 20px 0;
+        padding: 10px 15px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;  
+    }
+    .header .menu_center ul li:hover,
+    .header .menu_center ul li:focus,
+    .header .menu_center ul li.active{
+        border: 2px solid var(--principal);
+        border-radius: 4px;
+        display:flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .header .menu_center ul li a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header .menu_center ul li a{
+        text-decoration: none;
+        color: var(--principal);
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .header .menu_center ul li a img{
+        height: 20px;
+        margin-right: 5px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .header{
+        padding: 25px 0;
+    }
+}
+
+
+/* ===== MENU_MAIN ===== */
+@media screen{
+    .nav{
+        flex-wrap: nowrap;
+    }
+    .navbar-light .navbar-nav .nav-link.active,
+    .navbar-light .navbar-nav .show>.nav-link{
+        color: #626262;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+    }
+
+    .header .navbar-nav a.nav-item{
+        font-size: 14px;
+        margin: 0 10px 0px 10px;
+        color: #626262;
+        text-decoration: none;
+        padding-bottom: 3px;
+        border-bottom: 2px solid transparent;
+        font-weight: 500;
+    }
+    .header .navbar-nav a.nav-item:hover,
+    .header .navbar-nav a.nav-item:focus{
+        border-bottom: 2px solid var(--principal);
+    }
+
+    .navbar-toggler {
+        padding: .25rem .75rem;
+        font-size: 1.25rem;
+        line-height: 1;
+        background-color: var(--principal);
+        border: 1px solid transparent;
+        border-radius: .25rem;
+        transition: box-shadow .15s ease-in-out;
+    }
+    .btn.btn_menu_movil{
+        background-color: var(--principal);
+    }
+    .btn_menu_movil i{
+        color: #fff;
+    }
+    .btn.btn_menu_movil:focus{
+        box-shadow: none;
+    }
+}    
+
+@media screen and (min-width: 992px) and (max-width: 1399px) {
+    .header .navbar a.nav-item{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    
+    .navbar {
+        align-items: flex-start;
+    }
+    .navbar-toggler{
+        right: 0;
+        position: absolute;
+    }
+    .navbar-nav{
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        right: 0;
+        background: #f9f9f9;
+        top: 57px; 
+        z-index:2;
+    }
+    .header .navbar-nav a.nav-item{
+        margin: 0 0 ;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--principal);
+    }
+    .header .navbar-nav a.nav-item.special{
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--principal);
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+}
+@media screen and (max-width: 768px) {
+    .navbar-nav{
+        top: 107px; 
+    }
+}
+
+/* ===== PORTADA ===== */
+@media screen{
+    .portada{
+        position:relative;
+        background: url('../img/back_home.png'); 
+        background-position: center;
+        background-size: cover;
+        height: 470px;
+    }
+    .portada .form_home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        max-width: 800px;
+        width: 100%;
+        height: 80px;
+        background: #fff;
+        position: absolute;
+        top: 40px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    .portada .bajada{
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        background: rgba(255, 255, 255, 0.5);
+        color: var(--principal);
+        font-size: 24px;
+        font-weight: 400;
+        padding: 20px 15px;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .portada{
+        height: 870px;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1399px) {
+    .portada{
+        height: 550px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .portada{
+        height: 550px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .portada{
+        height: 870px;
+    }
+    .portada .bajada {
+        left: 15px;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .portada{
+        height: 870px;
+    }
+}
+
+/* ===== FORM ===== */
+
+@media screen{
+
+    .form_start{
+        margin: 0 15px;
+    }
+
+    
+    label {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--principal);
+        letter-spacing: 0.075em;
+    }
+    
+    .btn-primary.send_form_btn{
+        background: url('../img/send_form.svg') no-repeat #fff;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border-color: #fff;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .btn-primary.send_form_btn:hover,
+    .btn-primary.send_form_btn:focus {
+        background-color: none;
+        border-color: none;
+    }
+    .btn-primary.send_form_btn:hover{
+        background: url('../img/send_form_2.svg') no-repeat #fff;
+    }
+
+
+    .custom-select{
+        position:relative;
+    }
+    .custom-select select,
+    .custom-select.register select {
+        display: none; /*hide original SELECT element:*/
+    }
+
+    /*style the items (options), including the selected item:*/
+		
+    .select-items div {
+        background: #fff;
+        color:#626262;
+        height: 54px;
+        width: 100%;
+        font-weight: 400;
+        font-size: 14px;
+        display: inline-block;
+        line-height: 1;
+        border-radius: 0px;
+        -moz-border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+        outline: none !important;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0); 
+        box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0); 
+        border-bottom:  1px solid var(--principal);
+        padding: 10px 5px;
+    }
+
+    .select-items div{
+        width: 340px;
+        height: 46px;
+        padding: 16px 15px 0;
+        margin: 20px 15px 0;
+    }
+
+    
+    .select-selected {
+        background: url('../img/flechita.svg') no-repeat right center #fff;
+        background-size: 20px;
+        color:#626262;
+        height: 24px;
+        width: 100%;
+        font-weight: 400;
+        font-size: 15px;
+        display: inline-block;
+        line-height: 1;
+        border-radius: 0px;
+        -moz-border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+        outline: none !important;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0); 
+        box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0); 
+        border-bottom:  1px solid rgba(61, 61, 61, 0.5);
+        padding: 0px 5px 10px 5px;
+    }
+
+    .select-items div,
+    .select-selected{
+        width: 110px;
+        height: 50px;
+    }
+    .select-selected{
+        width: 110px;
+        height: 20px;
+    }
+
+
+    .select-items div{
+        margin: 0 0px;
+    }
+        
+    /*style items (options):*/
+    .select-items {
+        position: absolute;
+        top: 94%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        height: 250px;
+        overflow-x: hidden;
+    }
+        
+    /*hide the items when the select box is closed:*/
+    .select-hide {
+        display: none;
+    }
+        
+    .select-items div:hover,
+    .same-as-selected {
+        background-color: var(--principal);
+        color:#fff;
+    }
+
+    .form-control{
+        height: 24px;
+        display: block;
+        width: 110px;
+        padding: .375rem .75rem;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #626262;
+        border-radius: 0px;
+        -moz-border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+        outline: none !important;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0); 
+        box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0); 
+        border: none;
+        border-bottom:  1px solid rgba(61, 61, 61, 0.5);
+        padding: 0px 5px 2px 5px;
+    }
+    .form-control:focus {
+        background-color: #fff;
+        border-bottom:  1px solid var(--principal);
+        box-shadow: 0 0 0 0rem rgb(0 0 0 / 0%);
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .portada .form_home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        max-width: 800px;
+        width: 350px;
+        height: auto;
+        background: transparent;
+        position: absolute;
+        top: 40px;
+        right: 50%;
+        transform: translateX(50%);
+        padding-top: 10px;
+    }
+    .campos_form{
+        flex-direction:column
+    }
+
+    .form_start{
+        width: 160px;
+        background-color: #fff;
+        border: 1px solid var(--principal);
+        padding: 10px;
+        border-radius: 25px;
+        margin: 20px 0;
+    }
+}
+
+/* ===== ACCESOS ===== */
+
+@media screen{
+    .accesos{
+        padding: 25px 0;
+    }
+    .acceso{
+        display: flex;
+        align-items: center;
+    }
+    .acceso img{
+        height: 40px;
+        margin-right: 20px;
+    }
+    .acceso .title{
+        color: var(--principal);
+        font-size: 26px;
+        font-weight: 400;
+    }
+}
+@media screen and (max-width: 767px) {
+    .accesos{
+        flex-direction: column;
+    }
+    .acceso{
+        margin-bottom: 25px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .accesos .d-flex{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* ========== CUSTOM RADIO INPUT ========== */
+
+@media screen {
+	/* The container */
+	.box-custom-checkbox,
+	.box-custom-radio {
+		display: block;
+		position: relative;
+		cursor: pointer;
+		font-size: 14px;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+        color: #626262;
+        font-weight: 400;
+	}
+    
+	/* Hide the browser's default checkbox button */
+	.box-custom-checkbox input,
+	.box-custom-radio input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+	}
+	/* Create a custom checkbox button */
+	.box-custom-checkbox .checkmark,
+	.box-custom-radio .checkmark {
+		position: absolute;
+		top: -15px;
+		right: 10px;
+		height: 20px;
+		width: 20px;
+	}
+	/* Create the indicator (the dot/circle - hidden when not checked) */
+	.box-custom-checkbox .option .info .checkmark:after,
+	.box-custom-radio .option .info .checkmark:after {
+		position: absolute;
+		font-family: "Font Awesome 5 Free";
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 1;
+		color: #c0c0c0;
+	}
+	.box-custom-checkbox .option .info .checkmark:after {
+		content: "\f111";
+	}
+	.box-custom-radio .option .info .checkmark:after {
+		content: "\f111";
+	}
+
+	/* Show the indicator (dot/circle) when checked */
+	.box-custom-checkbox input:checked~.option .info .checkmark:after,
+	.box-custom-radio input:checked~.option .info .checkmark:after {
+		content: '\f058';
+		display: block;
+		font-weight: 700;
+		color: var(--principal);
+	}
+
+
+	.box-custom-checkbox input:checked~.checkmark:after {
+		content: '\f14a';
+	}	
+	.box-custom-radio input:checked~.checkmark:after {
+		content: '\f058';
+	}	
+	/* Style the indicator (dot/circle) */
+	.box-custom-checkbox .checkmark:after,
+	.box-custom-radio .checkmark:after {
+		top: 0;
+		left: 0;
+	}
+}
+
+@media screen {
+    #btn_collapse_avion{
+        order:1;
+    }
+    #btn_collapse_tren{
+        order:2;
+    }
+    #btn_collapse_bus{
+        order:3;
+    }
+    #collapseAvion{
+        order:4;
+    }
+    #collapseTren{
+        order:5;
+    }
+    #collapseBus{
+        order:6;
+    }
+
+    .preferencias .column_general{
+        border-bottom: 1px solid var(--principal);
+        margin-bottom: 10px;
+    }
+    .preferencias .title_general,
+    .preferencias a .title_general{
+        margin-right:20px;
+        text-align: center;
+        text-transform: lowercase;
+        color: #000;
+        font-size: 22px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        text-decoration:none !important;
+    }
+    .preferencias a {
+        cursor: inherit;
+        text-decoration:none !important;
+    }
+    .preferencias .title_general::first-letter{
+        text-transform: uppercase;
+    }
+    .preferencias a .title_general i{
+        font-size: 17px;
+        margin-left: 10px;
+        padding-top: 5px;
+        display: none;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .preferencias .bloque{
+        width: 20%;
+    }
+    .preferencias label{
+        width: 230px;
+        margin: 10px 15px;
+    }
+    .preferencias .box-custom-checkbox  .option,
+    .preferencias .box-custom-radio .option{
+        max-width: 350px;
+        width:100%;        
+        padding: 10px 15px 10px 20px;
+        border-radius: 10px;
+        background-color: #f8f8f8;
+        text-align: center;
+        height: 112px;
+    }    
+    .preferencias .box-custom-checkbox input:checked~.option,
+	.preferencias .box-custom-radio input:checked~.option{
+        background-color: #fadee5;
+	}
+
+    .box-custom-checkbox input:checked~.option .info i,
+	.box-custom-radio input:checked~.option .info i{
+        color: var(--principal);
+	}
+    .preferencias .box-custom-checkbox  .option .info i{
+        font-size: 35px;
+    }    
+
+    .preferencias .box-custom-checkbox  .option .info i.fa-plane{
+        transform: rotate(-45deg);
+    }
+
+    .preferencias .box-custom-checkbox  .option .info .text .first{
+        font-size: 15px;
+        color:#000;
+    }    
+    .preferencias .box-custom-checkbox  .option .info .text .valor{
+        font-size: 23px;
+        color:#000;
+    }    
+    .preferencias .box-custom-checkbox  .option .details{
+        font-size: 9px;
+        color:#000;
+    }    
+}
+
+@media screen and (max-width: 991px) {
+    .preferencias .column_general{
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .preferencias .title_general,
+    .preferencias a .title_general{
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .preferencias.alojamiento .bloque,
+    .preferencias .bloque{
+        width: 100%;
+    }
+    .preferencias .title_general,
+    .preferencias a .title_general{
+        margin-right:0px;
+        justify-content: center;
+    }
+    .preferencias a {
+        cursor: pointer;
+    }
+    .preferencias .column_general{
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    #transporte_table .bloque{
+        width: auto;
+    }
+    #transporte_table .bloque .transporte{
+        margin: 0 auto;
+    }
+    .preferencias a .title_general i{
+        color:var(--principal);
+        display: block;
+        transform: rotate(90deg);
+    }
+    .preferencias a:not(.collapsed) .title_general i{
+        transform: rotate(-90deg);
+    }
+
+}
+
+/* ==== PROGRESS BAR ==== */
+@media screen {
+    #progress{
+        padding: 30px 0;
+    }
+    #progress .progress_valores{
+        flex-direction: row;
+    }
+    .progress_table,
+    #progress .title{
+        width: 30%;
+    }
+    .progress {
+        height: 20px;
+        font-size: 16px;
+        background-color: #f8f8f8;
+    }
+    .progress:after{
+        content: "";
+        width: 30px;
+        height: 20px;
+        background: url(../img/send_form_2.svg) 0px no-repeat;
+        top: 0;
+        right: 5px;
+        position: relative;
+        display: inline-block;
+    }
+    #progress .title{
+        line-height: 1;
+        text-align: left;
+        text-transform: none;
+        color: var(--principal);
+        font-size: 27px;
+        font-weight: 700;       
+    }
+
+    .progress-bar{
+        background-color: var(--principal);
+    }
+
+    .progress_table .min_max .valor{
+        font-weight: 700;
+        font-size: 17px;
+        margin-top: 10px;
+        line-height: 1.2;
+        color: #000;
+    }
+}
+@media screen and (max-width: 767px) {
+    #progress .progress_valores{
+        flex-direction: column;
+    }
+    .progress_table,
+    #progress .title{
+        width: 100%;
+    }
+    #progress .title{ 
+        margin-bottom: 25px;
+    }
+}
+
+
+/* ==== COLLAPSE CARDS ==== */
+@media screen {
+    .first-column,
+    .second-column, 
+    .last-column{
+        text-align: center;
+    }
+
+    .title-column{
+        font-size: 18px;
+        color: #fff;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+    }
+
+    
+    .preferencias .multi-collapse .card.card-body label{
+        width: 290px;
+        margin: 25px 30px;
+    }
+     .preferencias #optionTransporte .multi-collapse .card.card-body label{
+        width: 250px !important;
+    }
+    .multi-collapse .card.card-body{
+        background-color: var(--principal);
+        border-radius: 30px;
+        padding: 20px 25px;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+    .multi-collapse .title-card{
+        text-align: center;
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+    .multi-collapse .title-card i.fa-plane {
+        transform: rotate(-45deg);
+        margin-left: 5px;
+    }
+    
+    .multi-collapse .card.card-body .box-custom-checkbox .option{
+        background-color: var(--principal);
+        border: 1px solid #fff;
+        border-radius: 0;
+        color: #fff;
+        width: 250px;
+        height: 100px;
+    }
+    .multi-collapse .card.card-body .option .info{
+        width: 250px;
+    }
+    .multi-collapse .card.card-body .option .info .fecha,
+    .multi-collapse .card.card-body .option .info .fecha_road i,
+    .multi-collapse .card.card-body .option .info .fecha_road .start_end{
+        font-size: 11px;
+        font-weight: 700;
+    }
+    .multi-collapse .card.card-body .option .info .fecha_road .start_end{
+        text-align: left;
+    }
+    .multi-collapse .card.card-body .option .info .fecha_road i.fa-plane{
+        transform: none;
+    }
+    .multi-collapse .card.card-body .option .info .fecha_road i{
+        margin: 5px;
+    }
+    .multi-collapse .card.card-body .option .info .fecha_road .line{
+        width: 50px;
+        height: 1px;
+        background: #fff;
+        margin: 0 5px;
+    }
+    .multi-collapse .card.card-body .box-custom-checkbox .checkmark,
+    .multi-collapse .card.card-body .box-custom-radio .checkmark{
+        position: absolute;
+        top: -20px;
+        right: -90px;
+        height: 20px;
+        width: 20px;
+    }
+    .multi-collapse .card.card-body .duration,
+    .multi-collapse .card.card-body .duration i{
+        font-size: 11px;
+        font-weight: 700;
+    }
+    .multi-collapse .card.card-body .duration i{
+        color: #fff;
+    }
+    .multi-collapse .card.card-body .price{
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .multi-collapse .card.card-body .box-custom-checkbox input:checked~.option{
+        color: #000;
+        background-color: #f8f8f8;
+        border-radius: 20px;
+    }
+    .multi-collapse .card.card-body .box-custom-checkbox input:checked~.option .info .fecha_road .line{
+        background-color: #444;
+    }
+
+    .multi-collapse .card.card-body .box-custom-checkbox .option .detail_left{
+        position: absolute;
+        left: 20px;
+        bottom: 5px;
+        font-size: 10px;
+        color: #fff;
+        font-weight: 700;
+    }
+    .multi-collapse .card.card-body .box-custom-checkbox  .option .detail_right,
+    .multi-collapse .card.card-body .box-custom-checkbox  .option .detail_right.logo_transportes{
+        position: absolute;
+        right: 60px;
+        bottom: 5px;
+        font-size: 10px;
+        color: #fff;
+        font-weight: 700;
+    }
+
+    .multi-collapse .card.card-body .box-custom-checkbox  .option .detail_right.logo_transportes{
+        right: 10px;
+    }
+
+    .multi-collapse .card.card-body .box-custom-checkbox input:checked~.option .detail_right,
+    .multi-collapse .card.card-body .box-custom-checkbox input:checked~.option .detail_left{
+        color: #000;
+    }
+
+
+    .multi-collapse .card.card-body .check_options{
+        padding: 0 30px 30px 30px;
+    }
+
+    .multi-collapse .card.card-body .check_options .text_one{
+        font-size: 11px;
+        color: #fff;
+        margin-right: 10px;
+    }
+    .multi-collapse .card.card-body .check_options i{
+        margin-right: 10px;
+    }
+    .multi-collapse .card.card-body .check_options .text_two{
+        text-align: left;
+        font-size: 9px;
+        color: #fff;
+        line-height: 14px;
+    }
+
+    .multi-collapse .card.card-body .check_options button{
+        display: flex;
+        width: 100px;
+        background: url(../img/send_form_4.png) no-repeat 48px -5px #fff;
+        border: none!important;
+        vertical-align: middle;
+        padding: 12px 12px;
+        font-size: 12px;
+        color:var(--principal);
+        font-weight: 700;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    .multi-collapse .card.card-body .check_options button:hover{
+        opacity: 0.7;
+    }
+
+    .multi-collapse .card.card-body .no_disp{
+        margin: 25px 30px;
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-radius: 0;
+        color: #fff;
+        width: 250px;
+        height: 100px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .preferencias.alojamiento .multi-collapse .card.card-body label  {
+        width: 260px;
+        margin: 25px 30px;
+    }
+    .preferencias.alojamiento .multi-collapse .card.card-body label,
+    .preferencias.comida .multi-collapse .card.card-body label,
+    .preferencias.ocio .multi-collapse .card.card-body label{
+        margin: 10px 5px;
+        width:auto;
+    }
+    
+    .preferencias.alojamiento .multi-collapse .card.card-body .box-custom-checkbox .option .info .carousel{
+        width: 250px;
+    }
+    .preferencias.alojamiento .multi-collapse .card.card-body .box-custom-checkbox .option .info .carousel .carousel-inner img{
+        object-fit: cover;
+        height: 250px !important;
+    }
+    .preferencias.alojamiento .multi-collapse .card.card-body .box-custom-checkbox .option .info .info_carrousel,
+    .preferencias.alojamiento .multi-collapse .card.card-body .box-custom-checkbox .option .info .info_carrousel i,
+    .preferencias.alojamiento .multi-collapse .card.card-body .box-custom-checkbox .option .info .info_carrousel a{
+        font-size: 11px;
+        text-align: left;
+        color: #fff;
+    }
+
+    .preferencias.alojamiento .multi-collapse .card.card-body .box-custom-checkbox .option .info .info_carrousel i{
+        font-size: 12px;
+    }
+    .preferencias.alojamiento .multi-collapse .card.card-body .check_options{
+        padding-right: 0px;
+    }
+
+    .preferencias.ocio .multi-collapse .card.card-body .box-custom-checkbox .option,
+    .preferencias.comida .multi-collapse .card.card-body .box-custom-checkbox .option,
+    .preferencias.alojamiento .multi-collapse .card.card-body .box-custom-checkbox .option{
+        width: 290px;
+        min-height: 300px;
+        height:auto;
+        padding: 30px 20px;
+    }
+
+
+    .multi-collapse .card.card-body .option .info{
+        width: 250px;
+    }
+
+
+    .preferencias.alojamiento .multi-collapse .card.card-body .box-custom-checkbox .checkmark,
+    .multi-collapse .card.card-body .box-custom-radio .checkmark,
+    .preferencias.comida .multi-collapse .card.card-body .box-custom-checkbox .checkmark,
+    .preferencias.comida .multi-collapse .card.card-body .box-custom-radio .checkmark,
+    .preferencias.ocio .multi-collapse .card.card-body .box-custom-checkbox .checkmark,
+    .preferencias.ocio .multi-collapse .card.card-body .box-custom-radio .checkmark{
+        position: absolute;
+        top: -20px;
+        right: -210px;
+        height: 20px;
+        width: 20px;
+    }
+
+    .preferencias.ocio .multi-collapse .card.card-body .box-custom-checkbox .option .info .principal,
+    .preferencias.comida .multi-collapse .card.card-body .box-custom-checkbox .option .info .principal{
+        margin-bottom: 15px;
+    }
+
+    .preferencias.ocio .multi-collapse .card.card-body .box-custom-checkbox .option .info .principal img,
+    .preferencias.comida .multi-collapse .card.card-body .box-custom-checkbox .option .info .principal img{
+        object-fit: cover;
+        height: 150px !important;
+    }
+
+    .preferencias.ocio .multi-collapse .card.card-body .box-custom-checkbox .option .info .info_simple,
+    .preferencias.ocio .multi-collapse .card.card-body .box-custom-checkbox .option .info .info_simple i,
+    .preferencias.ocio .multi-collapse .card.card-body .box-custom-checkbox .option .info .info_simple a,
+    .preferencias.comida .multi-collapse .card.card-body .box-custom-checkbox .option .info .info_simple,
+    .preferencias.comida .multi-collapse .card.card-body .box-custom-checkbox .option .info .info_simple i,
+    .preferencias.comida .multi-collapse .card.card-body .box-custom-checkbox .option .info .info_simple a{
+        font-size: 11px;
+        text-align: left;
+        color: #fff;
+    }
+
+    .preferencias.ocio .multi-collapse .card.card-body .box-custom-checkbox .option .info .info_simple i,
+    .preferencias.comida .multi-collapse .card.card-body .box-custom-checkbox .option .info .info_simple i{
+        font-size: 12px;
+    }
+
+    .preferencias.ocio .info .info_simple .reservas_icons .reservas,
+    .preferencias.ocio .info .info_simple .reservas_icons .hora,
+    .preferencias.comida .info .info_simple .reservas_icons .reservas,
+    .preferencias.comida .info .info_simple .reservas_icons .hora{
+        padding: 3px;
+        border: 1px solid #fff;
+    }
+
+    .preferencias.comida .multi-collapse .card.card-body .box-custom-checkbox input:checked~.option .info .info_simple,
+    .preferencias.comida .multi-collapse .card.card-body .box-custom-checkbox input:checked~.option .info .info_simple a,
+    .preferencias.alojamiento .multi-collapse .card.card-body .box-custom-checkbox input:checked~.option .info .info_carrousel,
+    .preferencias.alojamiento .multi-collapse .card.card-body .box-custom-checkbox input:checked~.option .info .info_carrousel a,
+    .preferencias.ocio .multi-collapse .card.card-body .box-custom-checkbox input:checked~.option .info .info_simple,
+    .preferencias.ocio .multi-collapse .card.card-body .box-custom-checkbox input:checked~.option .info .info_simple a{
+        color: #000;
+    }
+
+
+    .preferencias.ocio .multi-collapse .card.card-body .box-custom-checkbox input:checked~.option .info .info_simple i,
+    .preferencias.alojamiento .multi-collapse .card.card-body .box-custom-checkbox input:checked~.option .info .info_carrousel i,
+    .preferencias.comida .multi-collapse .card.card-body .box-custom-checkbox input:checked~.option .info .info_simple i{
+        color: var(--principal);
+    }
+
+
+    .preferencias.comida .multi-collapse .card.card-body .box-custom-checkbox input:checked~.option .info .info_simple .reservas_icons .reservas,
+    .preferencias.comida .multi-collapse .card.card-body .box-custom-checkbox input:checked~.option .info .info_simple .reservas_icons .hora,
+    .preferencias.ocio .multi-collapse .card.card-body .box-custom-checkbox input:checked~.option .info .info_simple .reservas_icons .reservas,
+    .preferencias.ocio .multi-collapse .card.card-body .box-custom-checkbox input:checked~.option .info .info_simple .reservas_icons .hora{
+        border: 1px solid var(--principal);
+    }
+
+
+
+    
+    .preferencias.comida .info .info_simple .price_hotel,
+    .preferencias.comida .info .info_simple .valoracion,
+    .preferencias.comida .info .info_simple .reservas_icons,
+    .preferencias.comida .info .info_simple .g-map,
+    .preferencias.alojamiento .info .info_carrousel .price_hotel,
+    .preferencias.alojamiento .info .info_carrousel .valoracion,
+    .preferencias.alojamiento .info .info_carrousel .reservas_icons,
+    .preferencias.alojamiento .info .info_carrousel .g-map,
+    .preferencias.ocio .info .info_simple .price_hotel,
+    .preferencias.ocio .info .info_simple .valoracion,
+    .preferencias.ocio .info .info_simple .reservas_icons,
+    .preferencias.ocio .info .info_simple .g-map{
+        margin-bottom: 5px;
+    }
+    .preferencias.comida  .info .info_simple .g-map,
+    .preferencias.alojamiento  .info .info_carrousel .g-map,
+    .preferencias.ocio  .info .info_simple .g-map {
+        white-space: nowrap;
+        max-width: 250px;
+        overflow: hidden;
+    }
+    .preferencias.alojamiento .info .info_carrousel .price_hotel{
+        text-align: right;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .preferencias.alojamiento  .info .info_carrousel .g-map a{
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    .preferencias.alojamiento  .info .info_carrousel .g-map:hover,
+    .preferencias.alojamiento  .info .info_carrousel .g-map:focus,
+    .preferencias.ocio  .info .info_simple .g-map:hover,
+    .preferencias.ocio  .info .info_simple .g-map:focus,
+    .preferencias.comida  .info .info_simple .g-map:hover,
+    .preferencias.comida  .info .info_simple .g-map:focus{
+        text-decoration: underline;
+    } 
+    .preferencias.ocio  .info .info_simple .style_price,
+    .preferencias.comida  .info .info_simple .style_price{
+        font-weight: 700;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .collapse .card.card-body{
+        padding: 20px 10px;
+    }
+    .preferencias .collapse .card.card-body label,
+    .collapse .card.card-body .no_disp{
+        margin: 25px 5px;
+    }
+    .preferencias.alojamiento .collapse .card.card-body .box-custom-checkbox .checkmark,
+    .collapse .card.card-body .box-custom-radio .checkmark,
+    .preferencias.comida .collapse .card.card-body .box-custom-checkbox .checkmark,
+    .preferencias.comida .collapse .card.card-body .box-custom-radio .checkmark,
+    .preferencias.ocio .collapse .card.card-body .box-custom-checkbox .checkmark,
+    .preferencias.ocio .collapse .card.card-body .box-custom-radio .checkmark{
+        right: -170px;
+    }
+    .preferencias.ocio .collapse .card.card-body .box-custom-checkbox .option,
+    .preferencias.comida .collapse .card.card-body .box-custom-checkbox .option,
+    .preferencias.alojamiento .collapse .card.card-body .box-custom-checkbox .option{
+        width: 230px;
+        padding: 30px 5px;
+    }
+    .preferencias.alojamiento .collapse .card.card-body .box-custom-checkbox .option .info .carousel,
+    .collapse .card.card-body .option .info{
+        width: 215px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .collapse .card.card-body .d-flex{
+        flex-direction: column;
+    }
+    .preferencias.alojamiento .info .info_carrousel .price_hotel{
+        text-align:right;
+    }      
+    .preferencias.alojamiento .info .info_carrousel .price_hotel{
+        text-align: right !important;
+    }    
+    .preferencias.alojamiento .info .info_carrousel .reservas_icons .reservas{
+        margin-bottom: 5px;
+    }
+    .preferencias.alojamiento .info .info_carrousel .reservas_icons,
+    .preferencias.comida .info .info_simple .reservas_icons,
+    .preferencias.ocio .info .info_simple .reservas_icons,
+    .preferencias.comida .info .info_simple .style_price{
+        align-items: flex-start !important;
+    }
+    .preferencias.alojamiento .info .info_carrousel .valoracion,
+    .preferencias.comida .info .info_simple .valoracion,
+    .preferencias.ocio .info .info_simple .valoracion,
+    .preferencias.comida .info .info_simple .valoracion,
+    .preferencias.comida .collapse .card.card-body .box-custom-checkbox .option .info .info_simple i,
+    .preferencias.comida .collapse .card.card-body .box-custom-checkbox .option .info .info_simple a {
+        text-align: left !important;
+    }
+    .preferencias.ocio .info .info_simple .price_museo{
+        align-items: flex-end !important;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    #optionTransporte,
+    #optionAlojamiento,
+    #optionComida,
+    #optionOcio{
+        text-align: center;
+    }
+    .collapse .card.card-body .d-flex{
+        flex-direction: column;
+    }
+    .collapse .card.card-body .check_options button{
+        margin: 15px auto 0;
+    }
+
+    .preferencias.alojamiento .collapse .card.card-body label{
+        height: auto;
+        width: 290px;
+    }
+}
+
+/* FINAL PAGE */
+@media screen {
+
+    .final_page{
+        padding: 0 130px;
+    }
+
+    .final_page .resumen_detail{
+        background-color: #fff;
+        padding: 30px;
+        max-width: 450px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .final_page .resumen_detail{
+        text-align: center;
+    }
+    .final_page .resumen_detail h1,
+    .final_page .resumen_detail h2{
+        font-size: 25px;
+    }
+    .final_page .resumen_detail button{
+        text-align:left;
+        border: none;
+        margin-bottom: 20px;
+    }
+
+    .final_page .resumen_detail button:hover,
+    .final_page .resumen_detail button:active{
+        box-shadow: none !important;
+    }
+    .final_page .resumen_detail .final_resume{
+        background-color: #f3f3f3;
+        color:#000;
+        font-weight: 500;
+    }
+    .final_page .resumen_detail .final_resume i{
+        color:var(--principal);
+    }
+    .final_page .resumen_detail .final_resume i.fa-plane{
+        transform: rotate(-45deg);
+    }
+    .final_page .resumen_detail .final_resume div{
+        margin-left: 25px;
+    }
+
+    .final_page .resumen_detail .final_resume div i{
+        transform: rotate(90deg);
+    }
+
+    .final_page .resumen_detail .card .resumen_box_inner{
+        border: 1px solid #fff;
+        margin-bottom:15px;
+        border-radius: 20px;
+        font-weight: 400;
+        padding: 10px 0;
+    }
+
+    .final_page .resumen_detail .card.card_alojamiento.
+    .final_page .resumen_detail .card.card_comida{
+        text-align: left;
+    }
+    .final_page .resumen_detail .card.card_alojamiento .resumen_box_inner,
+    .final_page .resumen_detail .card.card_comida .resumen_box_inner{
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        padding: 10px 10px;
+        text-align: left;
+    }
+    .final_page .resumen_detail .card.card_alojamiento .resumen_box_inner .g-map a,
+    .final_page .resumen_detail .card.card_comida .resumen_box_inner .g-map a{
+        color: #fff;
+        text-transform: none !important;
+    }
+    .final_page .resumen_detail .card.card_comida .resumen_box_inner .g-map,
+    .final_page .resumen_detail .card.card_alojamiento .resumen_box_inner .g-map{
+        white-space: nowrap;
+        max-width: 250px;
+        overflow: hidden;
+    }
+
+    
+    .final_page .resumen_number{
+        background-color: #f3f3f3;
+        padding: 30px;
+        border-radius: 25px;
+        text-align: center;
+        max-width: 300px;
+        width: 100%;        
+        margin-top: 20px;
+    }
+    .final_page .resumen_number .title{
+        padding-bottom: 20px;
+    }
+
+    .final_page .resumen_number .final_table{
+        padding-top: 25px;
+        border-top: 1px solid #000;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    .final_page .resumen_number .final_table i{
+        color: var(--principal);
+    }
+    .final_page .resumen_number .final_table i.fa-plane{
+        transform: rotate(-45deg);
+    }
+
+    .final_page .resumen_number .final_table .d-flex{
+        margin-bottom: 10px;
+    }
+
+    .final_page .resumen_number .final_table .d-flex .right_column{
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    .final_page .resumen_number .final_table .d-flex .right_column i{
+        margin-right: 5px;
+    }
+
+    .final_page .resumen_number .final_table .d-flex .left_column{
+        font-size: 14px;
+        text-align: right;
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+    .final_page .d-flex{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center !important;
+    }   
+
+}
+
+@media screen and (max-width: 767px) {
+    .final_page{
+        padding: 0 0px;
+    }
+    
+}
+
+@media screen {
+    .final_footer, 
+    .final_footer a{
+        color: #fff;
+        padding-top: 25px;
+        font-size: 12px;
+    }
+
+    .final_footer a i{ 
+        margin: 0 7px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    .final_footer a:hover i{
+        opacity: 0.7;
+    }
+
+}
+
+@media screen {
+    .modal .modal-body{
+        text-align: center;
+    }
+    .modal .modal-body p{
+        margin: 15px 0;
+        font-size: 15px;
+        color: #000;
+    }
+    .modal .modal-body p span{
+        color: var(--principal);
+    }
+}
